@@ -5,9 +5,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -32,6 +34,8 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Ud2Ejercicio1App(
                         modifier = Modifier.padding(innerPadding)
+                            .fillMaxSize()
+                            .wrapContentSize(Alignment.Center)
                     )
                 }
             }
@@ -68,7 +72,7 @@ fun ImagenRandomBoton(modifier: Modifier = Modifier) {
             contentDescription = stringResource(R.string.bandera, result)
         )
         Button(
-            onClick = {result = (1..6).random() }
+            onClick = {result = (1..5).random() }
         ) {
             Text(text = stringResource(R.string.tira))
         }
