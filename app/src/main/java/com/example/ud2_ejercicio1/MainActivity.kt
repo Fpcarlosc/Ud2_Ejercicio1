@@ -68,7 +68,7 @@ fun Ud2Ejercicio2App(modifier: Modifier = Modifier) {
     val iva = calcularIva(precio, ivaRadio)
 
     Column(
-        modifier = Modifier
+        modifier = modifier
             .statusBarsPadding()
             .padding(horizontal = 40.dp)
             .safeDrawingPadding(),
